@@ -1,0 +1,19 @@
+<!-- Header -->
+<app-home-header></app-home-header>
+
+<!-- Page Content -->
+<div class="container">≈
+  <header class="jumbotron text-center page_title " >
+    <h3 *ngIf="! showStdDetails" class="display-6  ">A Warm Welcome!</h3>
+    <h4 *ngIf="showStdDetails">Student Details</h4>
+    <a *ngIf="! showStdDetails" class="link"  (click)="openStudentDetails();" >Open Student Master!</a>
+  </header>
+  <div class="row text-center">
+    <div class="col-lg-12 col-md-12 mb-4" *ngIf="showStdDetails">
+      <app-student-master></app-student-master>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

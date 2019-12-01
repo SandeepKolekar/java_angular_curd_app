@@ -1,0 +1,63 @@
+<!-- Header -->
+<app-header></app-header>
+
+<!-- Register From -->
+<div id="register">
+    <h3 class="text-center text-white pt-5">register form</h3>
+    <div class="container">
+        <div id="register-row" class="row justify-content-center align-items-center">
+            <div id="register-column" class="col-md-12">
+                <div id="register-box" class="col-md-12">
+                    <h3 class="text-center text-info">New User Register</h3>
+                    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+                        <div class="row register-form">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input formControlName="userid" type="text" readonly=true class="form-control" placeholder="UserID" value="1" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="name" type="text" class="form-control" placeholder="Name *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="address" type="text" class="form-control" placeholder="Address *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="email" type="text" class="form-control" placeholder="Email *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="phoneno" type="text" class="form-control" placeholder="Phoneno *" value="" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input formControlName="gender" type="text" class="form-control" placeholder="Gender" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="hobbies" type="text" class="form-control" placeholder="hobbies *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="username" type="text" class="form-control" placeholder="Username*" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="password" type="text" class="form-control" placeholder="password *" value="" />
+                                </div>
+                                <div class="form-group">
+                                    <input formControlName="confirm_password" type="text" class="form-control" placeholder="Confirm Password *" value="" />
+                                </div>
+                            </div>
+                            <div class="col-md-12 action-btn">
+                                <div class="form-group">
+                                    <input type="submit" class="btn-primary"  value="Register"/> &nbsp; &nbsp;
+                                    <input type="button" (click)="login()" class="btn-info"  value="Login here"/> &nbsp; &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<app-footer></app-footer>

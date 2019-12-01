@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <button  (click)="addStudent();" class="btn btn-primary btn-xs float-right marginBottom" style="margin-left:10px;">New Student</button>  
+                <button  (click)="getReport();" class="btn btn-primary btn-xs float-right marginBottom">Report</button>  
+            </div>
+            <div class="table-responsive" *ngIf="stdList.length">
+                <table class="table table-bordred table-striped">
+                    <thead>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date Of birth</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let std of stdList">
+                            <td>{{std.rollno}}</td>
+                            <td>{{std.name}}</td>
+                            <td>{{std.address}}</td>
+                            <td>{{std.email}}</td>
+                            <td>{{std.phone}}</td>
+                            <td>{{std.dob}}</td>
+                            <td>
+                              <button (click)="updateStudent(std);" class="btn btn-primary btn-xs">Edit</button>   
+                            </td>
+                            <td>
+                                <button (click)="deleteStudent(std);" class="btn btn-danger btn-xs">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
